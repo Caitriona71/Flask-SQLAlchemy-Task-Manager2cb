@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Task Manager</title>
 </head>
@@ -14,20 +17,21 @@
         <!-- top navbar -->
         <nav>
             <div class="light-blue darken-1">
-              <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
-              <ul class="right hide-on-med-and-down">
+                <div class="nav-wrapper">
+                <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="">New Task</a></li>
-                <li><a href="">Categories</a></li>
+                <li><a href="{{ url_for('categories') }}">Categories</a></li>
               </ul>
-            </div>
+              </div>
           </nav>
         <!-- mobile sidenav -->
           <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="">New Task</a></li>
-            <li><a href="">Categories</a></li>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="">New Task</a></li>
+              <li><a href="{{ url_for('categories') }}">Categories</a></li>
           </ul>
     </header>
 
@@ -40,7 +44,6 @@
         <div class="footer-copyright">
           <div class="container">
             For educational purposes only
-          © 2014 Copyright Text
           <a class="grey-text text-lighten-4 right" href="https://codeinstitute.net" target="_blank">&copy; Code Institute</a>
           </div>
         </div>
